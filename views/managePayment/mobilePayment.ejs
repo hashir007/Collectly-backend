@@ -1,0 +1,629 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/assets/favicon.ico" />
+    <meta name='viewport' content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no'>
+    <meta name="theme-color" content="#FFD59B">
+    <meta name="description" content="Simplify Money Pooling and Achieve Shared Financial Goals" />
+    <title>Contribute - ChipInPool</title>
+
+    <!-- Fonts / CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/assets/css/bootstrap-5.3.2.min.css">
+    <link rel="stylesheet" href="/assets/css/default.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+
+    <!-- Inline styles -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #FFD59B 0%, #FFC371 100%);
+            min-height: 100vh;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            bottom: -50%;
+            left: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(197, 145, 75, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header-section {
+            text-align: center;
+            margin-bottom: 30px;
+            animation: fadeInDown 0.6s ease-out;
+        }
+
+        .header-title {
+            font-size: 32px;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-subtitle {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+        }
+
+        .pool-card {
+            background: white;
+            border-radius: 24px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            animation: fadeInUp 0.6s ease-out 0.2s both;
+        }
+
+        .pool-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .pool-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 16px;
+            object-fit: cover;
+            border: 3px solid #FFF5E6;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .pool-info {
+            flex: 1;
+        }
+
+        .pool-name {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1F2937;
+            margin-bottom: 6px;
+            line-height: 1.3;
+        }
+
+        .pool-amount {
+            font-size: 32px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #FFC371 0%, #C5914B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #E5E7EB, transparent);
+            margin: 24px 0;
+        }
+
+        .payment-section {
+            background: white;
+            border-radius: 24px;
+            padding: 24px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0. 15);
+            animation: fadeInUp 0.6s ease-out 0.4s both;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1F2937;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section-icon {
+            width: 24px;
+            height: 24px;
+            background: linear-gradient(135deg, #FFD59B 0%, #FFC371 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+
+        .applepay-container {
+            margin-bottom: 16px;
+        }
+
+        apple-pay-button {
+            --apple-pay-button-width: 100%;
+            --apple-pay-button-height: 55px;
+            --apple-pay-button-border-radius: 16px;
+            --apple-pay-button-padding: 0px;
+            -webkit-appearance: -apple-pay-button;
+            appearance: -apple-pay-button;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        apple-pay-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0. 15);
+        }
+
+        #paypal-button-container {
+            margin-top: 16px;
+        }
+
+        #paypal-button-container>div {
+            border-radius: 16px !important;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+            transition: transform 0.2s ease, box-shadow 0. 2s ease !important;
+        }
+
+        #paypal-button-container>div:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important;
+        }
+
+        /* Cancel Button Styles */
+        .cancel-button {
+            width: 100%;
+            padding: 16px;
+            margin-top: 16px;
+            background: white;
+            border: 2px solid #E5E7EB;
+            border-radius: 16px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #6B7280;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .cancel-button:hover {
+            background: #F9FAFB;
+            border-color: #D1D5DB;
+            color: #374151;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .cancel-button:active {
+            transform: translateY(0);
+        }
+
+        .security-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px;
+            background: #F9FAFB;
+            border-radius: 12px;
+            margin-top: 20px;
+            font-size: 13px;
+            color: #6B7280;
+        }
+
+        .security-icon {
+            color: #10B981;
+            font-size: 16px;
+        }
+
+        .loading-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .loading-overlay .active {
+            display: flex;
+        }
+
+        .loading-content {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            max-width: 300px;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto 20px;
+            border: 4px solid #F3F4F6;
+            border-top: 4px solid #FFC371;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        .loading-text {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1F2937;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @media (max-width:576px) {
+            body {
+                padding: 15px;
+            }
+
+            .header-title {
+                font-size: 28px;
+            }
+
+            .pool-card,
+            .payment-section {
+                padding: 20px;
+                border-radius: 20px;
+            }
+
+            .pool-image {
+                width: 70px;
+                height: 70px;
+            }
+
+            .pool-amount {
+                font-size: 28px;
+            }
+        }
+
+        .paypal-button {
+            border-radius: 16px !important;
+        }
+    </style>
+
+    <!-- External scripts -->
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/bootstrap-5.3.2.min.js"></script>
+    <script src="/assets/js/isotope-3.0.6.pkgd.min.js"></script>
+
+    <!-- Apple Pay & PayPal SDKs -->
+    <script src="https://applepay.cdn-apple.com/jsapi/v1/apple-pay-sdk.js"></script>
+    <script
+        src="https://www.paypal.com/sdk/js?components=applepay,buttons&client-id=<%= clientId %>&merchant-id=<%= merchantId %>"
+        data-partner-attribution-id="APPLEPAY"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header-section">
+            <div class="header-title">💳 Contribute</div>
+            <div class="header-subtitle">Secure payment powered by PayPal</div>
+        </div>
+
+        <!-- Pool Card -->
+        <div class="pool-card">
+            <div class="pool-header">
+                <img id="poolImage" src="<%= itemPhoto %>" class="pool-image" alt="Pool Image">
+                <div class="pool-info">
+                    <div class="pool-name">
+                        <%= itemName %>
+                    </div>
+                    <div class="pool-amount">$<%= discountedContributionAmount %>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Payment Section -->
+        <div class="payment-section">
+            <div class="section-title">
+                <span class="section-icon">💳</span>
+                Choose Payment Method
+            </div>
+
+            <div id="paymentMethodDiv">
+                <br />
+                <!-- Apple Pay -->
+                <div class="applepay-container" id="applepay-container"></div>
+
+                <!-- PayPal -->
+                <div id="paypal-button-container"></div>
+
+                <!-- Cancel Button -->
+                <button class="cancel-button" id="cancelButton">
+                    <span>✕</span>
+                    <span>Cancel Transaction</span>
+                </button>
+
+                <br />
+            </div>
+
+            <!-- Security Badge -->
+            <div class="security-badge">
+                <span class="security-icon">🔒</span>
+                <span>Your payment is secure and encrypted</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Inline script -->
+    <script>
+        (function () {
+            var poolImg = document.getElementById('poolImage');
+
+            // Cancel Button Handler
+            document.getElementById('cancelButton').addEventListener('click', function () {
+                console.log('Cancel button clicked');
+                InvokeCallback("?orderId=0&status=cancelled");
+            });
+
+            async function setupApplepay() {
+                try {
+                    const applepay = window.paypal.Applepay();
+                    const { isEligible, countryCode, currencyCode, merchantCapabilities, supportedNetworks } = await applepay.config();
+
+                    if (!isEligible) {
+                        return;
+                    }
+
+                    document.getElementById("applepay-container").innerHTML =
+                        '<apple-pay-button id="btn-appl" buttonstyle="black" type="contribute" locale="en"></apple-pay-button>';
+
+                    document.getElementById("btn-appl").addEventListener("click", onClick);
+
+                    async function onClick() {
+
+                        const paymentRequest = {
+                            countryCode,
+                            currencyCode: 'USD',
+                            merchantCapabilities,
+                            supportedNetworks,
+                            requiredShippingContactFields: ["name", "phone", "email", "postalAddress"],
+                            requiredBillingContactFields: ["postalAddress"],
+                            total: { label: 'Chipinpool', amount: '<%= discountedContributionAmount %>', type: "final" },
+                            lineItems: [{ label: `<%= itemName %>`, amount: '<%= discountedContributionAmount %>', type: "final" }]
+                        };
+
+                        let session = new window.ApplePaySession(4, paymentRequest);
+
+                        session.onvalidatemerchant = (event) => {
+                            applepay.validateMerchant({ validationUrl: event.validationURL, displayName: '<%= itemName %>' })
+                                .then((payload) => session.completeMerchantValidation(payload.merchantSession))
+                                .catch((err) => { console.error(err); session.abort(); });
+                        };
+
+                        session.onpaymentmethodselected = () => session.completePaymentMethodSelection({ newTotal: paymentRequest.total });
+
+                        session.onpaymentauthorized = async (event) => {
+                            try {
+                                const createOrderResponse = await fetch("<%= base %>/api/v1/finance/create-paypal-order", {
+                                    method: "POST",
+                                    headers: { "Content-Type": "application/json" },
+                                    body: JSON.stringify({
+                                        contributionAmount: parseFloat('<%= contributionAmount %>'),
+                                        discountedContributionAmount: parseFloat('<%= discountedContributionAmount %>'),
+                                        Id: parseInt('<%= itemId %>'),
+                                        discount: parseFloat('<%= discount %>'),
+                                        type: '<%= itemType %>'
+                                    })
+                                });
+
+                                const createOrderResult = await createOrderResponse.json();
+                                var order = createOrderResult.response_body.Order;
+                                const orderId = order.id;
+
+                                await applepay.confirmOrder({
+                                    orderId: orderId,
+                                    token: event.payment.token,
+                                    billingContact: event.payment.billingContact,
+                                    shippingContact: event.payment.shippingContact,
+                                });
+
+                                const approveOrderResponse = await fetch("<%= base %>/api/v1/finance/capture-paypal-order", {
+                                    method: "POST",
+                                    headers: { "Content-Type": "application/json" },
+                                    body: JSON.stringify({
+                                        orderId: orderId,
+                                        Id: parseInt('<%= itemId %>'),
+                                        userId: '<%= userId %>' === '0' ? null : '<%= userId %>',
+                                        type: '<%= itemType %>'
+                                    })
+                                });
+
+                                await approveOrderResponse.json();
+
+                                session.completePayment({ status: window.ApplePaySession.STATUS_SUCCESS });
+
+                                InvokeCallback("?orderId=" + orderId + "&status=success");
+                            } catch (err) {
+                                console.error('Apple Pay error:', err);
+                                session.completePayment({ status: window.ApplePaySession.STATUS_FAILURE });
+
+                                InvokeCallback("?orderId=0&status=error");
+                            }
+                        };
+
+                        session.oncancel = () => {
+                            console.log('Apple Pay cancelled');
+
+                            InvokeCallback("?orderId=0&status=cancelled");
+                        };
+                        session.begin();
+                    }
+                } catch (e) {
+                    console.error('Apple Pay setup failed', e);
+                }
+            }
+
+            document.addEventListener("DOMContentLoaded", () => {
+                if (window.ApplePaySession?.supportsVersion(4) && window.ApplePaySession?.canMakePayments()) {
+                    setupApplepay();
+                }
+
+                window.paypal.Buttons({
+                    async createOrder() {
+
+                        try {
+                            const response = await fetch("<%= base %>/api/v1/finance/create-paypal-order", {
+                                method: "POST",
+                                headers: { "Content-Type": "application/json" },
+                                body: JSON.stringify({
+                                    contributionAmount: parseFloat('<%= contributionAmount %>'),
+                                    discountedContributionAmount: parseFloat('<%= discountedContributionAmount %>'),
+                                    Id: parseInt('<%= itemId %>'),
+                                    discount: parseFloat('<%= discount %>'),
+                                    type: '<%= itemType %>'
+                                })
+                            });
+
+                            const result = await response.json();
+                            var order = result.response_body.Order;
+
+                            console.log('PayPal order created:', order.id);
+                            return order.id;
+                        } catch (err) {
+                            console.error('Error creating PayPal order:', err);
+
+                            throw err;
+                        }
+                    },
+                    async onApprove(data) {
+
+                        try {
+                            console.log('PayPal approved, orderId:', data.orderID);
+                            const response = await fetch("<%= base %>/api/v1/finance/capture-paypal-order", {
+                                method: "POST",
+                                headers: { "Content-Type": "application/json" },
+                                body: JSON.stringify({
+                                    orderId: data.orderID,
+                                    Id: parseInt('<%= itemId %>'),
+                                    userId: '<%= userId %>' === '0' ? null : '<%= userId %>',
+                                    type: '<%= itemType %>'
+                                })
+                            });
+
+                            await response.json();
+
+                            console.log('PayPal payment captured successfully');
+                            InvokeCallback("?orderId=" + data.orderID + "&status=success");
+                        } catch (err) {
+                            console.error('Error capturing PayPal payment:', err);
+
+                            InvokeCallback("?orderId=0&status=error");
+                        }
+                    },
+                    onCancel(data) {
+                        console.log('PayPal payment cancelled');
+
+                        InvokeCallback("?orderId=0&status=cancelled");
+                    },
+                    onError(err) {
+                        console.error('PayPal Error:', err);
+
+                        InvokeCallback("?orderId=0&status=error");
+                    },
+                    style: { layout: 'vertical', color: 'blue', shape: 'rect', label: 'paypal', height: 55 }
+                }).render('#paypal-button-container');
+            });
+
+
+            function InvokeCallback(lnk) {
+                var callback = 'chipinpoolapp://callback';
+                if (getMobileOperatingSystem() === 'Android') {
+                    window.open(callback + lnk, '_blank', 'location=yes');
+                } else if (getMobileOperatingSystem() === 'iOS') {
+                    setTimeout(function () { window.location = (callback + lnk); }, 2000);
+                }
+            }
+
+            function getMobileOperatingSystem() {
+                var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+                if (/windows phone/i.test(userAgent)) return "Windows Phone";
+                if (/android/i.test(userAgent)) return "Android";
+                if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) return "iOS";
+                return "unknown";
+            }
+        })();
+    </script>
+</body>
+
+</html>

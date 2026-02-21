@@ -1,0 +1,13 @@
+{
+    "POOL_JOINED": "Hi, {0} . You have successfully joined Pool - {1} .",
+    "POOL_CREATED": "Hi, {0} . You have successfully created Pool - {1} .",
+    "POOL_UPDATED": "Hi, {0} . You have successfully updated Pool - {1} .",
+    "POOL_MESSAGE_CREATED": "Hi, {0} . You have new message in Pool - {1} .",
+    "EVENT_MESSAGE_CREATED": "Hi, {0} . You have new message in Event - {1} .",
+    "POOL_WINNER_ADDED": "Hi, {0} . New winner added to pool - {1} .",
+    "POOL_PAYOUT_INITIATED": "Hi, {0} . Final winner picked for - {1} .",
+    "POOL_DELETE_REQUEST_CREATED": "Hi, {0} . Pool delete request created - {1} .",
+    "EVENT_TIP_CONTRIBUTION": "Hi, {0} . Pool event tip contributed - {1} .",
+    "POOL_CONTRIBUTION": "Hi, {0} . Pool contributed - {1} .",
+    "POOL_INVITATION": "Hi, {0} . You are invited to join Pool - {1} . Join using this link - {2} ."
+}

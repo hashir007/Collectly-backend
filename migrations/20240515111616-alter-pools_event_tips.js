@@ -1,0 +1,38 @@
+'use strict';
+
+/** @type {import('sequelize-cli').Migration} */
+module.exports = {
+  async up(queryInterface, Sequelize) {
+    return queryInterface.sequelize.transaction(t => {
+      return Promise.all([
+        queryInterface.addColumn('pools_event_tips', 'transaction_id', {
+          type: 'NVARCHAR(300)'
+        }, {
+          transaction: t
+        }),
+        queryInterface.addColumn('pools_event_tips', 'source', {
+          type: 'NVARCHAR(100)'
+        },
+          {
+            transaction: t
+          }),
+        queryInterface.removeColumn('pools_event_tips', 'payer_id', { transaction: t }),
+      ])
+    });
+  },
+
+  async down(queryInterface, Sequelize) {
+    return queryInterface.sequelize.transaction(t => {
+      return Promise.all([
+        queryInterface.removeColumn('pools_event_tips', 'transaction_id', { transaction: t }),
+        queryInterface.removeColumn('pools_event_tips', 'source', { transaction: t }),
+        queryInterface.addColumn('pools_event_tips', 'source', {
+          type: 'VARCHAR(255)'
+        },
+          {
+            transaction: t
+          }),
+      ])
+    });
+  }
+};

@@ -1,0 +1,14 @@
+{
+    "activitycontinuation": {
+        "apps": [ "com.chipinpool.mobile" ]
+    },
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "com.chipinpool.mobile",
+                "paths": [ "*", "/*" ]
+            }
+        ]
+    }
+}

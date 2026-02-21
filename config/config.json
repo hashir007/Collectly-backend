@@ -1,0 +1,35 @@
+{
+  "development": {
+    "username": "root",
+    "password": "TomorrowNeverDies88!@#",
+    "database": "chipinpool",
+    "host": "localhost",
+    "dialect": "mysql",
+    "dialectOptions": {
+      "charset": "utf8mb4",
+      "decimalNumbers": true
+    }
+  },
+  "test": {
+    "username": "root",
+    "password": "TomorrowNeverDies88!@#",
+    "database": "chipinpool",
+    "host": "localhost",
+    "dialect": "mysql",
+    "dialectOptions": {
+      "charset": "utf8mb4",
+      "decimalNumbers": true
+    }
+  },
+  "production": {
+    "username": "root",
+    "password": "LiveAndLetDie99!@#",
+    "database": "staging.chipinpool.com",
+    "host": "localhost",
+    "dialect": "mysql",
+    "dialectOptions": {
+      "charset": "utf8mb4",
+      "decimalNumbers": true
+    }
+  }
+}
