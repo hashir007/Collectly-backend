@@ -25,20 +25,20 @@ let serverOptions = {};
 let useHttps = false;
 
 //Uncomment for local HTTPS development
-// if (process.env.NODE_ENV === 'development') {
-//   try {
-//     const keyPath = path.resolve(__dirname, 'certificates', 'cert.key');
-//     const certPath = path.resolve(__dirname, 'certificates', 'cert.crt');
-//     if (fs.existsSync(keyPath) && fs.existsSync(certPath)) {
-//       serverOptions = { key: fs.readFileSync(keyPath), cert: fs.readFileSync(certPath) };
-//       useHttps = true;
-//     } else {
-//       console.warn('⚠️ SSL certificates not found.  Falling back to HTTP.');
-//     }
-//   } catch (err) {
-//     console.error('❌ Error loading SSL certificates:', err.message);
-//   }
-// }
+if (process.env.NODE_ENV === 'development') {
+  try {
+    const keyPath = path.resolve(__dirname, 'certificates', 'cert.key');
+    const certPath = path.resolve(__dirname, 'certificates', 'cert.crt');
+    if (fs.existsSync(keyPath) && fs.existsSync(certPath)) {
+      serverOptions = { key: fs.readFileSync(keyPath), cert: fs.readFileSync(certPath) };
+      useHttps = true;
+    } else {
+      console.warn('⚠️ SSL certificates not found.  Falling back to HTTP.');
+    }
+  } catch (err) {
+    console.error('❌ Error loading SSL certificates:', err.message);
+  }
+}
 
 // -----------------------------------------------------------------------------
 // 2.  SECURITY & PERFORMANCE MIDDLEWARE

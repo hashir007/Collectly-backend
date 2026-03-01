@@ -82,8 +82,8 @@ class PayPalInterface {
                         "description": description,
                         "type": "SERVICE",
                         "category": "SOFTWARE",
-                        "image_url": "https://chip.chipinpool.com/assets/img/logo-2.png",
-                        "home_url": "http://chipinpool.com/"
+                        "image_url": "https://chip.collectly.com/assets/img/logo-2.png",
+                        "home_url": "http://collectly.com/"
                     }),
                 { headers }
             );

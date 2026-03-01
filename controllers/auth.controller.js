@@ -193,9 +193,9 @@ exports.WebRegister = async (req, res, next) => {
             let mailBody = ejs.render(template, { user: record });
 
             let emailConfiguration = {
-                from: `ChipInPool <${process.env.EMAIL1_USERNAME}>`,
+                from: `collectly <${process.env.EMAIL1_USERNAME}>`,
                 to: record.email,
-                subject: 'ChipInPool Registration Successful',
+                subject: 'collectly Registration Successful',
                 html: mailBody
             };
 
@@ -227,7 +227,7 @@ exports.WebRegister = async (req, res, next) => {
                     });
 
                     const referrerEmailConfiguration = {
-                        from: `ChipInPool <${process.env.EMAIL1_USERNAME}>`,
+                        from: `collectly <${process.env.EMAIL1_USERNAME}>`,
                         to: referrer.email,
                         subject: 'You Earned Referral Credits!',
                         html: referrerMailBody
@@ -245,7 +245,7 @@ exports.WebRegister = async (req, res, next) => {
                     });
 
                     const welcomeCreditEmailConfiguration = {
-                        from: `ChipInPool <${process.env.EMAIL1_USERNAME}>`,
+                        from: `collectly <${process.env.EMAIL1_USERNAME}>`,
                         to: record.email,
                         subject: 'Welcome Credit Added to Your Account!',
                         html: welcomeCreditMailBody
@@ -387,13 +387,13 @@ exports.CreateForgotPassword = async (req, res, next) => {
                 user: record.User,
                 link: resetLink,
                 expirationTime: expirationTime,
-                supportEmail: process.env.SUPPORT_EMAIL || 'support@chipinpool.com'
+                supportEmail: process.env.SUPPORT_EMAIL || 'support@collectly.com'
             });
 
             const emailConfiguration = {
-                from: `ChipInPool <${process.env.EMAIL1_USERNAME}>`,
+                from: `collectly <${process.env.EMAIL1_USERNAME}>`,
                 to: record.User.email,
-                subject: 'Password Reset Request - ChipInPool',
+                subject: 'Password Reset Request - collectly',
                 html: mailBody,
                 headers: {
                     'X-Request-ID': requestId,
@@ -523,13 +523,13 @@ exports.ResetPassword = async (req, res, next) => {
                         changedAt: new Date().toISOString(),
                         ipAddress: req.ip,
                         userAgent: req.get('User-Agent'),
-                        supportEmail: process.env.SUPPORT_EMAIL || 'support@chipinpool.com'
+                        supportEmail: process.env.SUPPORT_EMAIL || 'support@collectly.com'
                     });
 
                     const emailConfiguration = {
-                        from: `ChipInPool <${process.env.EMAIL1_USERNAME}>`,
+                        from: `collectly <${process.env.EMAIL1_USERNAME}>`,
                         to: record.email,
-                        subject: "Password Changed Successfully - ChipInPool",
+                        subject: "Password Changed Successfully - collectly",
                         html: mailBody,
                         headers: {
                             'X-Request-ID': requestId,
@@ -635,7 +635,7 @@ exports.ChangeAccountPassword = async (req, res, next) => {
             const mailBody = ejs.render(template, { user: record, supportEmail: process.env.SUPPORT_EMAIL || '' });
 
             const emailConfiguration = {
-                from: `ChipInPool <${process.env.EMAIL1_USERNAME}>`,
+                from: `collectly <${process.env.EMAIL1_USERNAME}>`,
                 to: record.email,
                 subject: "Password Changed Successfully",
                 html: mailBody
@@ -739,9 +739,9 @@ exports.CreateEmailVerificationRequest = async (req, res, next) => {
 
         // Configure email
         emailConfiguration = {
-            from: `ChipInPool <${process.env.EMAIL1_USERNAME || process.env.EMAIL_USERNAME || 'noreply@chipinpool.com'}>`,
+            from: `collectly <${process.env.EMAIL1_USERNAME || process.env.EMAIL_USERNAME || 'noreply@collectly.com'}>`,
             to: verificationRequest.User.email,
-            subject: 'Verify Your Email Address - ChipInPool',
+            subject: 'Verify Your Email Address - collectly',
             html: mailBody,
             // Add text version for email clients that don't support HTML
             text: `Please verify your email address by clicking the following link: ${link}`
@@ -914,7 +914,7 @@ exports.DeleteAccount = async (req, res, next) => {
             });
 
             let userEmailConfiguration = {
-                from: `ChipInPool <${process.env.EMAIL1_USERNAME}>`,
+                from: `collectly <${process.env.EMAIL1_USERNAME}>`,
                 to: user.email,
                 subject: 'Account Deletion Request Received',
                 html: mailBody
@@ -924,7 +924,7 @@ exports.DeleteAccount = async (req, res, next) => {
 
             // Email to admin
             let adminEmailConfiguration = {
-                from: `ChipInPool <${process.env.EMAIL1_USERNAME}>`,
+                from: `collectly <${process.env.EMAIL1_USERNAME}>`,
                 to: process.env.ADMIN_EMAIL || process.env.EMAIL1_USERNAME,
                 subject: `Account Deletion Request - User: ${user.username} (ID: ${user.id})`,
                 html: `
@@ -1314,7 +1314,7 @@ function validateAndSanitizeCallbackUrl(urlString) {
         // Define allowed domains (you can configure this in environment variables)
         const allowedDomains = process.env.ALLOWED_CALLBACK_DOMAINS
             ? process.env.ALLOWED_CALLBACK_DOMAINS.split(',')
-            : ['chipinpool.com', 'localhost']; // Default allowed domains
+            : ['collectly.com', 'localhost']; // Default allowed domains
 
         const domain = url.hostname;
         const isAllowed = allowedDomains.some(allowed =>

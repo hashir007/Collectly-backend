@@ -553,11 +553,11 @@ exports.ContactUs = async (req, res, next) => {
                 email: email,
                 message: message,
                 receivedAt: new Date().toLocaleString(),
-                supportEmail: process.env.SUPPORT_EMAIL || 'support@chipinpool.com'
+                supportEmail: process.env.SUPPORT_EMAIL || 'support@collectly.com'
             });
 
             const emailConfiguration = {
-                from: `ChipInPool Contact <${process.env.EMAIL1_USERNAME}>`,
+                from: `collectly Contact <${process.env.EMAIL1_USERNAME}>`,
                 to: process.env.CONTACT_RECIPIENT || process.env.EMAIL1_USERNAME, // Use separate email for contacts if needed
                 subject: `New Contact Form Submission from ${firstName} ${lastName}`,
                 html: mailBody,

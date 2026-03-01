@@ -544,7 +544,7 @@ exports.UpdatePoolJoiningRequest = async (req, res, next) => {
             });
 
             const emailConfiguration = {
-                from: `ChipInPool <${process.env.EMAIL1_USERNAME}>`,
+                from: `collectly <${process.env.EMAIL1_USERNAME}>`,
                 to: member.email,
                 subject: action === 'approve' ? 'Pool Join Request Approved' : 'Pool Join Request Rejected',
                 html: mailBody

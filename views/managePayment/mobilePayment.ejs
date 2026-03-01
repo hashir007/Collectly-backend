@@ -7,7 +7,7 @@
     <meta name='viewport' content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no'>
     <meta name="theme-color" content="#FFD59B">
     <meta name="description" content="Simplify Money Pooling and Achieve Shared Financial Goals" />
-    <title>Contribute - ChipInPool</title>
+    <title>Contribute - collectly</title>
 
     <!-- Fonts / CSS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -459,7 +459,7 @@
                             supportedNetworks,
                             requiredShippingContactFields: ["name", "phone", "email", "postalAddress"],
                             requiredBillingContactFields: ["postalAddress"],
-                            total: { label: 'Chipinpool', amount: '<%= discountedContributionAmount %>', type: "final" },
+                            total: { label: 'collectly', amount: '<%= discountedContributionAmount %>', type: "final" },
                             lineItems: [{ label: `<%= itemName %>`, amount: '<%= discountedContributionAmount %>', type: "final" }]
                         };
 
@@ -607,7 +607,7 @@
 
 
             function InvokeCallback(lnk) {
-                var callback = 'chipinpoolapp://callback';
+                var callback = 'collectlyapp://callback';
                 if (getMobileOperatingSystem() === 'Android') {
                     window.open(callback + lnk, '_blank', 'location=yes');
                 } else if (getMobileOperatingSystem() === 'iOS') {

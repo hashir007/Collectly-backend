@@ -24,7 +24,7 @@ async function SendEmailNotification(forceNotificationCheck, userId, to, subject
         if (doSend) {
 
             let emailConfiguration = {
-                from: `ChipInPool <${process.env.EMAIL1_USERNAME}>`,
+                from: `collectly <${process.env.EMAIL1_USERNAME}>`,
                 to: to,
                 subject: subject,
                 html: body
