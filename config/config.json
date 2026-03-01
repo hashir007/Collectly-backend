@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "TomorrowNeverDies88!@#",
-    "database": "chipinpool",
+    "password": "Temp123",
+    "database": "collectly",
     "host": "localhost",
     "dialect": "mysql",
     "dialectOptions": {
@@ -12,8 +12,8 @@
   },
   "test": {
     "username": "root",
-    "password": "TomorrowNeverDies88!@#",
-    "database": "chipinpool",
+    "password": "Temp123",
+    "database": "collectly",
     "host": "localhost",
     "dialect": "mysql",
     "dialectOptions": {
@@ -23,8 +23,8 @@
   },
   "production": {
     "username": "root",
-    "password": "LiveAndLetDie99!@#",
-    "database": "staging.chipinpool.com",
+    "password": "Temp123",
+    "database": "collectly",
     "host": "localhost",
     "dialect": "mysql",
     "dialectOptions": {
