@@ -1,0 +1,35 @@
+{
+  "development": {
+    "username": "root",
+    "password": "TomorrowNeverDies88!@#",
+    "database": "collectly",
+    "host": "localhost",
+    "dialect": "mysql",
+    "dialectOptions": {
+      "charset": "utf8mb4",
+      "decimalNumbers": true
+    }
+  },
+  "test": {
+    "username": "root",
+    "password": "TomorrowNeverDies88!@#",
+    "database": "collectly",
+    "host": "localhost",
+    "dialect": "mysql",
+    "dialectOptions": {
+      "charset": "utf8mb4",
+      "decimalNumbers": true
+    }
+  },
+  "production": {
+    "username": "root",
+    "password": "TomorrowNeverDies88!@#",
+    "database": "collectly",
+    "host": "localhost",
+    "dialect": "mysql",
+    "dialectOptions": {
+      "charset": "utf8mb4",
+      "decimalNumbers": true
+    }
+  }
+}

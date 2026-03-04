@@ -1,0 +1,466 @@
+@media screen and (max-width: 1439px) {
+	.dashboard-graph:first-child,
+	.dashboard-graph:last-child,
+	.dashboard-my-pools,
+	.dashboard-joined-pools {
+		width: calc(50% - 12px);
+	}
+	.dashboard-pools-area {
+		gap: 24px;
+		flex-wrap: wrap;
+	}
+	.dashboard-latest-updates {
+		width: 75%;
+	}
+	.pool-cover-image-label img,
+	.edit-pool-area .pool-cover-image-label img {
+		width: 100%;
+	}
+	.pool-cover-image {
+		width: 25%;
+	}
+	.pool-data-inputs {
+		width: 75%;
+	}
+	.pool-data-inputs .data-input-item,
+	.create-multiple-pool-area .pool-data-inputs .data-input-item {
+		width: 100%;
+	}
+	.pool-data-inputs .data-input-item input,
+	.pool-data-inputs .data-input-item .nice-select,
+	.create-multiple-pool-area .pool-data-inputs .data-input-item input,
+	.create-multiple-pool-area .pool-data-inputs .data-input-item .nice-select,
+	.create-multiple-pool-area
+		.pool-data-inputs
+		.data-input-item
+		.group-goal-amount {
+		width: 75%;
+	}
+	.pool-data-inputs .data-input-item label {
+		width: 25%;
+	}
+	.pool-details-thumbnail {
+		width: 30%;
+	}
+	.pool-details-thumbnail img {
+		width: 100%;
+		height: auto;
+	}
+	.pool-information {
+		width: 40%;
+	}
+	.pool-fund-area {
+		width: 20%;
+	}
+	.pool-data-item {
+		width: 100%;
+	}
+	.pool-details-content {
+		gap: 24px;
+	}
+	.support-email-area-form form {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 1199px) {
+	.account-info-field-item {
+		width: 100%;
+	}
+	.account-info-fields {
+		width: 100%;
+	}
+	.support-email-area {
+		gap: 24px;
+	}
+	.pool-chat-list-container {
+		width: calc(40% - 12px);
+	}
+	.pool-chat-message-container {
+		width: calc(60% - 12px);
+	}
+	.pool-chat-message-details {
+		width: calc(40% - 12px);
+	}
+	.message-body-container {
+		width: 100%;
+	}
+	.pool-fund-area {
+		width: calc(50% - 12px);
+	}
+	.pool-information {
+		width: calc(50% - 12px);
+	}
+	.pool-details-thumbnail {
+		width: 50%;
+	}
+	.pool-details-content {
+		flex-wrap: wrap;
+		align-items: flex-start;
+		justify-content: center;
+	}
+	.pool-fund-area button {
+		max-width: 248px;
+	}
+	.my-pools-container .pool-card, .discover-pools-container .pool-card {
+		width: calc(50% - 24px);
+	}
+}
+
+@media screen and (max-width: 1100px) {
+	.new-pool-button {
+		font-size: 0;
+		gap: 0;
+		padding: 0 10px;
+	}
+	.pool-data-table table thead {
+		display: none;
+	}
+	.pool-data-table table tbody tr {
+		display: flex;
+		flex-direction: column;
+		background: white;
+		border-radius: 16px;
+		border: none;
+		padding-left: 150px;
+		position: relative;
+	}
+	.pool-data-table table tbody {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+	}
+	.pool-data-table table tr td:last-child {
+		display: none;
+	}
+	.pool-data-table table td:before {
+		content: attr(data-label);
+		position: absolute;
+		left: 30px;
+	}
+	.pool-data-table table td {
+		min-height: 52px;
+	}
+	.pool-data-table .pool-progressbar {
+		margin-top: 6px;
+	}
+}
+
+@media screen and (max-width: 992px) {
+	.pool-chat-message-area-head .back-button-area {
+		display: revert;
+	}
+	button.invite-member,
+	button.delete-pool {		
+		gap: 0;
+		padding: 12px;
+	}
+	.account-info-field-item {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 8px;
+		margin-bottom: 20px;
+	}
+	.account-info-buttons {
+		margin-left: 0
+	}
+	.account-info-buttons .account-save-changes {
+		margin-bottom: 10px;
+	}
+	.account-info-container {
+		flex-direction: column;
+	}
+	.faq-topics-container {
+		width: fit-content;
+	}
+	.faq-questions-answers {
+		width: 100%;
+	}
+	.faq-topics-container button.nav-link ul {
+		display: none;
+	}
+	.support-email-area {
+		flex-direction: column;
+	}
+	.my-pools-container .pool-card, .discover-pools-container .pool-card {
+		width: 100%;
+	}
+	.pool-chat-list-container,
+	.pool-chat-message-container,
+	.pool-chat-message-details {
+		width: 100%;
+	}
+	.dashboard-graph-area {
+		flex-wrap: wrap;
+		gap: 24px;
+	}
+	.my-pools-list {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.dashboard-graph:first-child,
+	.dashboard-graph:last-child,
+	.dashboard-my-pools,
+	.dashboard-joined-pools,
+	.dashboard-latest-updates {
+		width: 100%;
+	}
+	.dashboard-pools-area {
+		flex-direction: column;
+		gap: 24px;
+	}
+	.pool-item {
+		width: 100%;
+	}
+	.pool-item:last-child {
+		padding-bottom: 20px;
+	}
+	.cip-navbar-dark {
+		width: 210px;
+	}
+	.cip-menu a.menu-item,
+	.cip-navbar-dark .logout-button {
+		padding: 8px 8px;
+		gap: 8px;
+	}
+	.cip-dashboard-body {
+		margin-left: 210px;
+	}
+	.text-headline-1 {
+		font-size: 32px;
+		line-height: 44px;
+	}
+	.cip-menu {
+		gap: 8px;
+	}
+	.cip-menu {
+		margin-top: 30px;
+	}
+	.create-single-pool-area,
+	.create-multiple-pool-area {
+		flex-direction: column;
+	}
+	.pool-cover-image {
+		width: 50%;
+	}
+	.pool-data-inputs {
+		width: 100%;
+	}
+	.pool-data-inputs .data-input-item input,
+	.pool-data-inputs .data-input-item .nice-select,
+	.create-multiple-pool-area .pool-data-inputs .data-input-item input,
+	.create-multiple-pool-area .pool-data-inputs .data-input-item .nice-select,
+	.create-multiple-pool-area
+		.pool-data-inputs
+		.data-input-item
+		.group-goal-amount {
+		max-width: 384px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.pool-details-area .pool-topbar .pool-buttons-area {
+		display: flex;
+		flex-direction: row-reverse;
+	}
+	.joining-requests-card {
+		width: 300px;
+	}
+	.user-avatar {
+		display: none;
+	}
+	.top-bar-elements .search-box input {
+		width: 148px;
+	}
+	.cip-dashboard-body {
+		margin-left: 0;
+	}
+	.cip-navbar-dark {
+		left: -210px;
+		transition: 0.3s;
+	}
+	.cip-navbar-dark.expanded {
+		left: 0;
+		transition: 0.3s;
+		z-index: 10;
+	}
+	.cip-dashboard-body.responsive-menu-active {
+		overflow: hidden;
+		height: 100vh;
+	}
+	.responsive-menu-button {
+		display: revert;
+	}
+	.responsive-menu-backdrop.active {
+		width: 100%;
+		height: 100%;
+		background-color: #000000ab;
+		position: absolute;
+		top: 0;
+		left: 0;
+		transition: 0.3s;
+		z-index: 1;
+	}
+	.notifications-card.card-hidden {
+		height: 100%;
+		border-radius: 0;
+		position: fixed;
+		top: 0;
+		right: -100%;
+	}
+	.notifications-card {
+		height: 100%;
+		border-radius: 0;
+		position: fixed;
+		top: 0;
+		right: 0;
+		width: 287px;
+	}
+	.notification-items:after {
+		display: none;
+	}
+    .create-multiple-pool-area .data-input-item .group-goal-amount input:first-child,
+    .create-multiple-pool-area .data-input-item .group-goal-amount input:nth-child(2) {
+        width: 40%;
+    }
+    .create-multiple-pool-area .group-goal-amount button {
+        width: 20%;
+    }
+    .pool-data-inputs .data-input-item, .create-multiple-pool-area .pool-data-inputs .data-input-item {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    .pool-data-inputs .data-input-item label {
+        width: 100%;
+    }
+    .pool-data-inputs .data-input-item input, .pool-data-inputs .data-input-item .nice-select, .create-multiple-pool-area .pool-data-inputs .data-input-item input, .create-multiple-pool-area .pool-data-inputs .data-input-item .nice-select, .create-multiple-pool-area .pool-data-inputs .data-input-item .group-goal-amount {
+        width: 100%;
+        max-width: 100%;
+    }
+    .pool-topbar .pool-buttons-area {
+		margin-top: 100px;
+        display: flex;
+    }
+    .create-multiple-pool-area .pool-buttons-area,
+    .create-single-pool-area .pool-buttons-area {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 576px) {
+	.support-faq-area {
+		flex-direction: column;
+	}
+	.faq-topics-container {
+		width: 100%;
+	}
+	.top-bar-elements .search-box {
+		display: none;
+	}
+    .pool-cover-image {
+        width: 75%;
+    }
+	.pool-type-button {
+		flex-direction: column;
+	}
+	.pool-type-button a {
+		width: 100%;
+	}
+	.replace-thumbnail-container {
+		flex-direction: column;
+	}
+	.pool-details-content {
+		align-items: center;
+		flex-direction: column;
+	}
+	.pool-details-thumbnail,
+	.pool-information,
+	.pool-fund-area {
+		width: 100%;
+	}
+	.pools-area-buttons {
+		gap: 12px;
+		flex-direction: column-reverse;
+	}
+	.sign-up-area {
+		padding: 60px 0;
+	}
+	.sign-up-area h2 {
+		font-size: 36px;
+		line-height: 48px;
+	}
+	.sign-up-area p {
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 24px;
+		margin-bottom: 32px;
+	}
+	form.sign-up-form {
+		width: 100%;
+		max-width: 380px;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	.pool-details-area .pool-topbar {
+		flex-direction: column;
+		gap: 12px;
+	}
+	.account-info-field-item input,
+	.account-info-buttons {
+		width: 100%;
+	}
+	.pool-filters button {
+		padding: 12px;
+	}
+	.text-headline-1 {
+		font-size: 28px;
+		line-height: 40px;
+	}
+	.dashboard-pools-area .pool-footer {
+		padding-top: 8px;
+	}
+	.notifications-card {
+		width: 210px;
+	}
+	.pool-item {
+		flex-direction: column;
+	}
+	.pool-chat-message-area-head .pool-members,
+	.pool-chat-message-area-head .chat-thumbnail {
+		display: none;
+	}
+	.text-title-1 {
+		font-size: 18px;
+	}
+	.cip-dashboard-body {
+		padding: 16px;
+	}
+	.pool-chat-body {
+		height: calc(100vh - 107px);
+	}
+	.pool-chat-message-details {
+		gap: 16px;
+		padding: 16px;
+	}
+	.my-pools-container .pool-card .pool-members {
+		margin-top: 12px;
+	}
+	.support-email-area-form input, .support-email-area-form textarea {
+		padding: 18px 16px;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.pool-type-button a {
+		width: 100%;
+		height: fit-content;
+		padding: 24px;
+		text-align: center;
+	}
+	.pool-type-button a img {
+		display: none;
+	}
+}
